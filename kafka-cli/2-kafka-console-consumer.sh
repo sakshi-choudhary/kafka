@@ -10,7 +10,7 @@ kafka-console-producer --broker-list 127.0.0.1:9092 --topic first_topic
 kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic first_topic --from-beginning
 
 # displaykey,values and timestamp
-kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic first_topic --formatter 
+kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic mysecondtopic --formatter 
 kafka.tools.DefaultMessageFormatter 
 --property print.timestamp=true 
 --property print.timestamp=true 
