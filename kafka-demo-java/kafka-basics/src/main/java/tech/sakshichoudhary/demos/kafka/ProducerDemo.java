@@ -5,6 +5,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+import java.awt.*;
 import java.util.Properties;
 
 public class ProducerDemo {
@@ -12,6 +13,8 @@ public class ProducerDemo {
     public static void main(String[] args) {
 
         String bootstrapServers = "127.0.0.1:9092";
+
+        System.out.println("I am a kafka producer!");
 
         // create Producer properties
         Properties properties = new Properties();
