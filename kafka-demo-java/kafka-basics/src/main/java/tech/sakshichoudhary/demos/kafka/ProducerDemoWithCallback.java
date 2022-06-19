@@ -36,7 +36,7 @@ public class ProducerDemoWithCallback {
                     if (e == null) {
                         // the record was successfully sent
                         logger.info("Received new metadata. \n" +
-                                "Topic:" + recordMetadata.topic() + "\n" +
+                                "Topic: " + recordMetadata.topic() + "\n" +
                                 "Partition: " + recordMetadata.partition() + "\n" +
                                 "Offset: " + recordMetadata.offset() + "\n" +
                                 "Timestamp: " + recordMetadata.timestamp());
@@ -45,6 +45,11 @@ public class ProducerDemoWithCallback {
                     }
                 }
             });
+            try{
+                Thread.sleep(3000);
+            }catch (InterruptedException e){
+                e.printStackTrace();
+            }
         }
 
         // flush data
